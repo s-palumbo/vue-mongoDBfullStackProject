@@ -1,4 +1,32 @@
 # Vue.js: Creating and Hosting a Full-Stack Site
+
+This repository contains files from the LinkedIn Learning course "Vue.js: Creating and Hosting a Full-Stack Site" by Shaun Wassell. The files are used here for personal learning and are licensed under the [LinkedIn Learning Exercise File License](LICENSE).
+
+## License
+
+This project is licensed under the LinkedIn Learning Exercise File License. For detailed information, see the [LICENSE](LICENSE) file in the project root.
+
+## Attribution
+
+The original content is provided by LinkedIn Corporation and is used with permission. All rights to the original content are held by LinkedIn Corporation.
+
+## Usage
+
+The files in this repository are for personal and educational use only. Redistribution or commercial use is not permitted without proper authorization.
+
+## Third-Party Dependencies
+
+This project uses third-party libraries. Please review the applicable licenses for these dependencies.
+
+## Security Notice
+
+Ensure that sensitive information such as passwords and API keys is not included in the repository. If you find any, remove them and update your security practices.
+
+
+
+
+
+# Vue.js: Creating and Hosting a Full-Stack Site
 This is the repository for the LinkedIn Learning course Vue.js: Creating and Hosting a Full-Stack Site. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![Vue.js: Creating and Hosting a Full-Stack Site][lil-thumbnail-url] 
