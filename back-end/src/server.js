@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import express from "express";
 import { MongoClient } from 'mongodb';
 import path from 'path';
@@ -11,7 +13,8 @@ let products = productsRaw; */
 /* SEE NOTES AT BOTTOM */
 async function start() {
     /* DONT post this to a public repo with password in the URL */
-  const url = 'mongodb+srv://sspalumbo:eZAsQ5pUoE7IUAG1@cluster0.1okua.mongodb.net/?retryWrites=true&w=majority&appName=cluster0';
+  /* const url = 'mongodb+srv://sspalumbo:eZAsQ5pUoE7IUAG1@cluster0.1okua.mongodb.net/?retryWrites=true&w=majority&appName=cluster0'; */
+  const url = process.env.MONGODB_URL;
   const client = new MongoClient(url);
 
   await client.connect();
