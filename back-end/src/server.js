@@ -1,8 +1,14 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+
+console.log('MongoDB URL:', process.env.MONGODB_URL);
 
 import express from "express";
 import { MongoClient } from 'mongodb';
 import path from 'path';
+
+
+
 //import { cartItems as cartItemsRaw, products as productsRaw } from "./temp-data"; /* adding raw variable to allow manipulation of json objects */
 
 /* assigning variables to imported variables for use in Post endpoints */
@@ -12,8 +18,7 @@ let products = productsRaw; */
 
 /* SEE NOTES AT BOTTOM */
 async function start() {
-    /* DONT post this to a public repo with password in the URL */
-  /* const url = 'mongodb+srv://sspalumbo:eZAsQ5pUoE7IUAG1@cluster0.1okua.mongodb.net/?retryWrites=true&w=majority&appName=cluster0'; */
+
   const url = process.env.MONGODB_URL;
   const client = new MongoClient(url);
 
