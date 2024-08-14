@@ -11,20 +11,35 @@
     </div>
     </div>
     <div v-else >
-      <p>Product not found.</p>
+      <!-- <p>Product not found.</p> -->
+       <NotFoundPage />
     </div>
 
 </template>
 
 <script>
-import { products } from '../temp-data';
+import axios from 'axios';
+/* import { products } from '../temp-data'; */
+import NotFoundPage from '@/pages/NotFoundPage.vue';
 
 export default {
   name: "ProductDetailPage",
   data() {
     return {
-      product: products.find(product => product.id === this.$route.params.productId) || null,
+      /* product: products.find(product => product.id === this.$route.params.productId) || null, */
+      product: {},
     }
+  },
+  components: {
+    NotFoundPage
+  },
+  async created() {
+    const response = await axios.get(`/api/products/${this.$route.params.productId}`);
+    const product = response.data;
+    this.product = product;
   }
 }
 </script>
+
+<!-- Retained commented out code that was the "dummy" code prior to adding a backend database. Leaving it as reference for 
+ potential future use of front-end only apps -->
